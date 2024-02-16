@@ -1,0 +1,99 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class Ventana extends JFrame {
+
+	public Ventana() {
+
+		
+		//para que se vea
+		this.setVisible(true);
+		
+		// para que se cierre 
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//para que aparesca en el centro
+		this.setLocationRelativeTo(null);
+		
+		//para que modifique el tamaño
+		this.setSize(1000,800);
+		
+		//para poner titulo
+		this.setTitle("Hola mundo");
+		
+		this.setLayout(null);
+		this.loadcomponents();
+	}
+
+	public void loadcomponents() {
+		JPanel login = new JPanel();
+		login.setSize(1000, 800);
+		login.setLocation(0, 0);
+		login.setLayout(null);
+		
+		login.setBackground(Color.black);
+		
+		JLabel title = new JLabel("bienvenido al sistema");
+		title.setFont(new Font("Agency FB", Font.BOLD, 14));
+		title.setBackground(Color.white);
+		title.setLocation(150, 10);
+		title.setSize(220, 40);
+		title.setOpaque(true);
+		login.add(title);
+		
+		JLabel user_tag = new JLabel("correo electronico");
+		
+		user_tag.setFont(new Font("Agency FB", Font.BOLD, 14));
+		user_tag.setBackground(Color.white);
+		user_tag.setLocation(10, 70);
+		user_tag.setSize(100, 30);
+		user_tag.setOpaque(true);
+		login.add(user_tag);
+		
+		JTextField c = new JTextField();
+		c.setFont(new Font("Agency FB", Font.BOLD, 14));
+		c.setBackground(Color.white);
+		c.setLocation(10, 110);
+		c.setSize(100, 30);
+		c.setOpaque(true);
+		login.add(c);
+		
+		JLabel contra = new JLabel("contraseña");
+		
+		contra.setFont(new Font("Agency FB", Font.BOLD, 14));
+		contra.setBackground(Color.white);
+		contra.setLocation(10, 150);
+		contra.setSize(100, 30);
+		contra.setOpaque(true);
+		login.add(contra);
+		
+		JPasswordField pass = new JPasswordField();
+		pass.setFont(new Font("Agency FB", Font.BOLD, 14));
+		pass.setBackground(Color.white);
+		pass.setLocation(10, 190);
+		pass.setSize(100, 30);
+		pass.setOpaque(true);
+		login.add(pass);
+		
+		JButton acceder = new JButton("Iniciar sesion");
+		acceder.setFont(new Font("Agency FB", Font.BOLD, 14));
+		acceder.setBackground(Color.white);
+		acceder.setLocation(10, 230);
+		acceder.setSize(100, 30);
+		acceder.setOpaque(true);
+		login.add(acceder);
+		
+		
+		this.add(login);
+		this.repaint();
+	}
+	
+
+}
