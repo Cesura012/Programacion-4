@@ -1,0 +1,226 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Ventana extends JFrame {
+
+	public Ventana() {
+
+		
+		//para que se vea
+		this.setVisible(true);
+		
+		// para que se cierre 
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//para que aparesca en el centro
+		this.setLocationRelativeTo(null);
+		
+		//para que modifique el tamaño
+		this.setSize(1000,1000);
+		
+		//para poner titulo
+		this.setTitle("Hola mundo");
+		
+		
+		this.setLayout(null);
+		this.loadcomponents();
+	}
+
+	public void loadcomponents() {
+		
+		this.login();
+		this.registro();
+		
+	}
+	
+	public void login() {
+		
+		JPanel login = new JPanel();
+		login.setSize(this.getWidth()/2, getHeight());
+		login.setLocation(0, 0);
+		login.setLayout(null);
+		
+		login.setBackground(Color.black);
+		
+		JLabel title = new JLabel("bienvenido al sistema");
+		title.setFont(new Font("Agency FB", Font.BOLD, 14));
+		title.setBackground(Color.white);
+		title.setLocation(150, 10);
+		title.setSize(220, 40);
+		title.setOpaque(true);
+		login.add(title);
+		
+		JLabel user_tag = new JLabel("correo electronico");
+		
+		user_tag.setFont(new Font("Agency FB", Font.BOLD, 14));
+		user_tag.setBackground(Color.white);
+		user_tag.setLocation(10, 70);
+		user_tag.setSize(100, 30);
+		user_tag.setOpaque(true);
+		login.add(user_tag);
+		
+		JTextField c = new JTextField();
+		c.setFont(new Font("Agency FB", Font.BOLD, 14));
+		c.setBackground(Color.white);
+		c.setLocation(10, 110);
+		c.setSize(100, 30);
+		c.setOpaque(true);
+		login.add(c);
+		
+		JLabel contra = new JLabel("contraseña");
+		
+		contra.setFont(new Font("Agency FB", Font.BOLD, 14));
+		contra.setBackground(Color.white);
+		contra.setLocation(10, 150);
+		contra.setSize(100, 30);
+		contra.setOpaque(true);
+		login.add(contra);
+		
+		JPasswordField pass = new JPasswordField();
+		pass.setFont(new Font("Agency FB", Font.BOLD, 14));
+		pass.setBackground(Color.white);
+		pass.setLocation(10, 190);
+		pass.setSize(100, 30);
+		pass.setOpaque(true);
+		login.add(pass);
+		
+		JButton acceder = new JButton("Iniciar sesion");
+		acceder.setFont(new Font("Agency FB", Font.BOLD, 14));
+		acceder.setBackground(Color.white);
+		acceder.setLocation(10, 230);
+		acceder.setSize(100, 30);
+		acceder.setOpaque(true);
+		login.add(acceder);
+		
+		
+		
+		this.add(login);
+		this.repaint();
+	}
+	
+	public void registro() {
+		JPanel registro = new JPanel();
+		registro.setSize(this.getWidth()/2, getHeight());;
+		registro.setLocation(this.getWidth()/2, 0);
+		registro.setLayout(null);
+		
+		registro.setBackground(Color.red);
+		JLabel titleR = new JLabel("               Registro De Perosnaje:");
+		titleR.setFont(new Font("Agency FB", Font.BOLD, 14));
+		titleR.setBackground(Color.white);
+		titleR.setLocation(120, 10);
+		titleR.setSize(220, 40);
+		titleR.setOpaque(true);
+		registro.add(titleR);
+		
+		JLabel name_tag = new JLabel("Nombre del Personaje: ");
+		
+		name_tag.setFont(new Font("Agency FB", Font.BOLD, 14));
+		//name_tag.setBackground(Color.white);
+		name_tag.setLocation(10, 70);
+		name_tag.setSize(100, 30);
+		//	name_tag.setOpaque(true);
+		registro.add(name_tag);
+		
+		JTextField name = new JTextField();
+		name.setBounds(8, 95, 280, 35);
+		registro.add(name);
+		
+		
+		JRadioButton type = new JRadioButton("Paladin");
+		type.setBounds(10, 150, 70, 35);
+		type.setOpaque(false);
+		registro.add(type);
+		
+		JRadioButton type2 = new JRadioButton("mago");
+		type2.setBounds(100, 150, 70, 35);
+		type2.setOpaque(false);
+		registro.add(type2);
+		
+		JRadioButton type3 = new JRadioButton("ladron");
+		type3.setBounds(190, 150, 70, 35);
+		type3.setOpaque(false);
+		registro.add(type3);
+		
+		JRadioButton type4 = new JRadioButton("sanador");
+		type4.setBounds(270, 150, 90, 35);
+		type4.setOpaque(false);
+		registro.add(type4);
+		
+		ButtonGroup grupo = new ButtonGroup();
+		grupo.add(type);
+		grupo.add(type2);
+		grupo.add(type3);
+		grupo.add(type4);
+		
+		
+		JCheckBox gusto1 = new JCheckBox ("espada");
+		gusto1.setBounds(10, 240, 80, 35);
+		gusto1.setOpaque(false);
+		registro.add(gusto1);
+		
+		JCheckBox gusto2 = new JCheckBox ("hacha");
+		gusto2.setBounds(100, 240, 80, 35);
+		gusto2.setOpaque(false);
+		registro.add(gusto2);
+		
+		JCheckBox gusto3 = new JCheckBox ("baston");
+		gusto3.setBounds(190, 240, 70, 35);
+		gusto3.setOpaque(false);
+		registro.add(gusto3);
+		
+		JCheckBox gusto4 = new JCheckBox ("daga");
+		gusto4.setBounds(270, 240, 90, 35);
+		gusto4.setOpaque(false);
+		registro.add(gusto4);
+		
+		JLabel bio_tag = new JLabel("transfondo del personaje : ");
+		
+		bio_tag.setFont(new Font("Agency FB", Font.BOLD, 14));
+		bio_tag.setLocation(10, 280);
+		bio_tag.setSize(150, 80);
+		registro.add(bio_tag);
+		
+		JTextArea bio = new JTextArea(10,10);
+		bio.setLocation(10, 330);
+		bio.setSize(350, 100);
+		registro.add(bio);
+		
+		JLabel vives_tag = new JLabel("donde vives: ");
+		
+		vives_tag.setFont(new Font("Agency FB", Font.BOLD, 14));
+		vives_tag.setLocation(10, 350);
+		vives_tag.setSize(100, 30);
+		registro.add(vives_tag);
+		
+		String Razas[] = { "Humano" ,"Draconiano" , "Enano" , "Alien"};
+		
+		JComboBox cajita = new JComboBox(Razas);
+		cajita.setLocation(10, 450);
+		cajita.setSize(100, 50);
+		registro.add(cajita);
+		
+		
+		
+		
+		
+		
+		
+		this.add(registro);
+		this.repaint();
+	}
+	
+	
+}
