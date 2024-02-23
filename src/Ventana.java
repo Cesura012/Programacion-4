@@ -70,7 +70,7 @@ public class Ventana extends JFrame {
 		
 		JLabel user_tag = new JLabel("correo electronico");
 		
-		user_tag.setFont(new Font("Agency FB", Font.BOLD, 14));
+		user_tag.setFont(new Font("Agency FB", Font.BOLD, 14)); 
 		user_tag.setBackground(Color.white);
 		user_tag.setLocation(10, 70);
 		user_tag.setSize(100, 30);
@@ -88,7 +88,7 @@ public class Ventana extends JFrame {
 		JLabel contra = new JLabel("contraseña");
 		
 		contra.setFont(new Font("Agency FB", Font.BOLD, 14));
-		contra.setBackground(Color.white);
+		contra.setBackground(Color.red);
 		contra.setLocation(10, 150);
 		contra.setSize(100, 30);
 		contra.setOpaque(true);
