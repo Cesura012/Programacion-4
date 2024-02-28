@@ -47,7 +47,8 @@ public class Ventana extends JFrame {
 		
 		//this.login();
 	//	this.registro();
-		this.admin();
+		//this.admin();
+		this.calculadora();
 		
 	}
 	
@@ -367,4 +368,159 @@ public class Ventana extends JFrame {
 		
 		
 	}
+
+	public void calculadora() {
+		
+			JPanel calcu_panel = new JPanel();
+			calcu_panel.setSize(this.getWidth(), getHeight());;
+			calcu_panel.setLocation(0, 0);
+			calcu_panel.setLayout(null);
+			calcu_panel.setBackground(Color.GRAY);
+			
+			
+			JTextField calculation = new JTextField();
+			calculation.setBounds(50, 140, 350, 60);
+			calcu_panel.add(calculation);
+			
+			JButton uno = new JButton("1");
+			uno.setFont(new Font("Agency FB", Font.BOLD, 14));
+			uno.setBackground(Color.white);
+			uno.setLocation(10, 230);
+			uno.setSize(100, 30);
+			uno.setOpaque(true);
+			calcu_panel.add(uno);
+			
+			JButton dos = new JButton("2");
+			dos.setFont(new Font("Agency FB", Font.BOLD, 14));
+			dos.setBackground(Color.white);
+			dos.setLocation(120, 230);
+			dos.setSize(100, 30);
+			dos.setOpaque(true);
+			calcu_panel.add(dos);
+			
+			JButton tres = new JButton("3");
+			tres.setFont(new Font("Agency FB", Font.BOLD, 14));
+			tres.setBackground(Color.white);
+			tres.setLocation(240, 230);
+			tres.setSize(100, 30);
+			tres.setOpaque(true);
+			calcu_panel.add(tres);
+			
+			JButton divi = new JButton("/");
+			divi.setFont(new Font("Agency FB", Font.BOLD, 14));
+			divi.setBackground(Color.white);
+			divi.setLocation(350, 230);
+			divi.setSize(100, 30);
+			divi.setOpaque(true);
+			calcu_panel.add(divi);
+		
+			JButton cuatro = new JButton("4");
+			cuatro.setFont(new Font("Agency FB", Font.BOLD, 14));
+			cuatro.setBackground(Color.white);
+			cuatro.setLocation(10, 270);
+			cuatro.setSize(100, 30);
+			cuatro.setOpaque(true);
+			calcu_panel.add(cuatro);
+			
+			JButton cinco = new JButton("5");
+			cinco.setFont(new Font("Agency FB", Font.BOLD, 14));
+			cinco.setBackground(Color.white);
+			cinco.setLocation(120, 270);
+			cinco.setSize(100, 30);
+			cinco.setOpaque(true);
+			calcu_panel.add(cinco);
+			
+			JButton seis = new JButton("6");
+			seis.setFont(new Font("Agency FB", Font.BOLD, 14));
+			seis.setBackground(Color.white);
+			seis.setLocation(240, 270);
+			seis.setSize(100, 30);
+			seis.setOpaque(true);
+			calcu_panel.add(seis);
+			
+			JButton multi = new JButton("*");
+			multi.setFont(new Font("Agency FB", Font.BOLD, 14));
+			multi.setBackground(Color.white);
+			multi.setLocation(350, 270);
+			multi.setSize(100, 30);
+			multi.setOpaque(true);
+			calcu_panel.add(multi);
+			
+			JButton siete = new JButton("7");
+			siete.setFont(new Font("Agency FB", Font.BOLD, 14));
+			siete.setBackground(Color.white);
+			siete.setLocation(10, 310);
+			siete.setSize(100, 30);
+			siete.setOpaque(true);
+			calcu_panel.add(siete);
+			
+			JButton ocho = new JButton("8");
+			ocho.setFont(new Font("Agency FB", Font.BOLD, 14));
+			ocho.setBackground(Color.white);
+			ocho.setLocation(120, 310);
+			ocho.setSize(100, 30);
+			ocho.setOpaque(true);
+			calcu_panel.add(ocho);
+			
+			JButton nueve = new JButton("9");
+			nueve.setFont(new Font("Agency FB", Font.BOLD, 14));
+			nueve.setBackground(Color.white);
+			nueve.setLocation(240, 310);
+			nueve.setSize(100, 30);
+			nueve.setOpaque(true);
+			calcu_panel.add(nueve);
+			
+			JButton resta = new JButton("-");
+			resta.setFont(new Font("Agency FB", Font.BOLD, 14));
+			resta.setBackground(Color.white);
+			resta.setLocation(350, 310);
+			resta.setSize(100, 30);
+			resta.setOpaque(true);
+			calcu_panel.add(resta);
+			
+			JButton cero = new JButton("0");
+			cero.setFont(new Font("Agency FB", Font.BOLD, 14));
+			cero.setBackground(Color.white);
+			cero.setLocation(10, 350);
+			cero.setSize(100, 30);
+			cero.setOpaque(true);
+			calcu_panel.add(cero);
+			
+			JButton punto = new JButton(".");
+			punto.setFont(new Font("Agency FB", Font.BOLD, 14));
+			punto.setBackground(Color.white);
+			punto.setLocation(120, 350);
+			punto.setSize(100, 30);
+			punto.setOpaque(true);
+			calcu_panel.add(punto);
+			
+			JButton suma = new JButton("+");
+			suma.setFont(new Font("Agency FB", Font.BOLD, 14));
+			suma.setBackground(Color.white);
+			suma.setLocation(240, 350);
+			suma.setSize(100, 30);
+			suma.setOpaque(true);
+			calcu_panel.add(suma);
+			
+			JButton igual = new JButton("=");
+			igual.setFont(new Font("Agency FB", Font.BOLD, 14));
+			igual.setBackground(Color.white);
+			igual.setLocation(350, 350);
+			igual.setSize(100, 30);
+			igual.setOpaque(true);
+			calcu_panel.add(igual);
+			
+			this.add(calcu_panel);
+			this.repaint();
+	}
+
+
+
+
+
+
+
+
+
+
 }
