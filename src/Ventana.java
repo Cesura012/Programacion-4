@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -17,6 +18,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class Ventana extends JFrame {
 
@@ -48,7 +50,8 @@ public class Ventana extends JFrame {
 		//this.login();
 	//	this.registro();
 		//this.admin();
-		this.calculadora();
+		//this.calculadora();
+		this.loginm();
 		
 	}
 	
@@ -110,6 +113,13 @@ public class Ventana extends JFrame {
 		acceder.setSize(100, 30);
 		acceder.setOpaque(true);
 		login.add(acceder);
+		
+		JLabel img = new JLabel("");
+		img.setIcon(new ImageIcon(getClass().getResource("pez.png")));
+		img.setBounds(10, 300, 256, 256);
+		img.setOpaque(true);
+		img.setBackground(Color.WHITE);
+		login.add(img);
 		
 		
 		
@@ -514,7 +524,94 @@ public class Ventana extends JFrame {
 			this.repaint();
 	}
 
+	public void loginm() {
+		
+		
+		JPanel panelf = new JPanel();
+		
+		panelf.setSize(this.getWidth(), this.getHeight());
+		panelf.setLocation(0, 0);
+		panelf.setLayout(null);
+		panelf.setBackground(Color.decode("#2b488a"));
+		
+		JLabel titleLogin = new JLabel("User Login", SwingConstants.CENTER);;
+		titleLogin.setFont(new Font("Segoe UI Black", Font.ITALIC, 40));
+		titleLogin.setForeground(Color.decode("#ffffff"));
+		titleLogin.setLocation(200, 20);
+		titleLogin.setSize(300, 60);
+		panelf.add(titleLogin);
+		
+		JPanel panela = new JPanel();
+		
+		panela.setSize(600, 370);
+		panela.setLocation(45, 120);
+		panela.setLayout(null);
+		panela.setBackground(Color.decode("#23396c"));
+		this.add(panela);
+		
+		JLabel title = new JLabel("My Account", SwingConstants.CENTER);
+		title.setFont(new Font("Segoe UI Black", Font.ITALIC, 50));
+		title.setForeground(Color.decode("#e0ca7c"));
+		title.setLocation(120, 20);
+		title.setSize(350, 70);
+		panela.add(title);
+		
+		JLabel titleUsername = new JLabel("Enter Your Username", SwingConstants.CENTER);
+		titleUsername.setFont(new Font("Segoe UI Black", Font.ITALIC, 15));
+		titleUsername.setForeground(Color.decode("#ffffff"));
+		titleUsername.setLocation(100, 110);
+		titleUsername.setSize(170, 30);
+		panela.add(titleUsername);
+			
+		JTextField user_field = new JTextField();
+		user_field.setSize(390, 40);
+		user_field.setLocation(110, 150);;
+		panela.add(user_field);
+		
+		JLabel titlePassword = new JLabel("Enter Your Password", SwingConstants.CENTER);
+		titlePassword.setFont(new Font("Segoe UI Black", Font.ITALIC, 15));
+		titlePassword.setForeground(Color.decode("#ffffff"));
+		titlePassword.setLocation(100, 210);
+		titlePassword.setSize(170, 30);
+		panela.add(titlePassword);
+		
+		JTextField password_field = new JTextField();
+		password_field.setSize(390, 40);
+		password_field.setLocation(110, 250);;
+		panela.add(password_field);
+		
+		JButton loginBtn = new JButton("Login");
+		loginBtn.setFont(new Font("Segoe UI Black", Font.ITALIC, 20));
+		loginBtn.setBackground(Color.decode("#e9cc68"));
+		loginBtn.setSize(200, 50);;
+		loginBtn.setLocation(200, 310);;
+		panela.add(loginBtn);
+		
+		JLabel titlehave = new JLabel("Dont have a account?", SwingConstants.CENTER);
+		titlehave.setFont(new Font("Segoe UI Black", Font.ITALIC, 15));
+		titlehave.setForeground(Color.decode("#ffffff"));
+		titlehave.setLocation(250, 510);
+		titlehave.setSize(170, 30);
+		panelf.add(titlehave);
+		
+		JButton upBtn = new JButton("Sing Up");
+		upBtn.setFont(new Font("Segoe UI Black", Font.ITALIC, 20));
+		upBtn.setBackground(Color.decode("#e9cc68"));
+		upBtn.setSize(200, 50);;
+		upBtn.setLocation(250, 550);;
+		panelf.add(upBtn);
+		
+		JLabel img = new JLabel("");
+		img.setIcon(new ImageIcon(getClass().getResource("candado.png")));
+		img.setBounds(50, 170, 50, 100);
+		img.setOpaque(true);
+		img.setBackground(Color.WHITE);
+		panela.add(img);
+	
+		this.add(panelf);
+		this.repaint();
 
+	}
 
 
 
