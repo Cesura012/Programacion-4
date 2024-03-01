@@ -1,5 +1,9 @@
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.util.Iterator;
 
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
@@ -20,7 +24,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-public class Ventana extends JFrame {
+public class Ventana extends JFrame {//><
 
 	public Ventana() {
 
@@ -35,7 +39,7 @@ public class Ventana extends JFrame {
 		this.setLocationRelativeTo(null);
 		
 		//para que modifique el tamaño
-		this.setSize(1000,1000);
+		this.setSize(800,500);
 		
 		//para poner titulo
 		this.setTitle("Hola mundo");
@@ -51,7 +55,8 @@ public class Ventana extends JFrame {
 	//	this.registro();
 		//this.admin();
 		//this.calculadora();
-		this.loginm();
+		//this.loginm();
+		this.calculadora2();
 		
 	}
 	
@@ -613,7 +618,56 @@ public class Ventana extends JFrame {
 
 	}
 
+	public void calculadora2() {
+		this.setSize(800, 650);
+		
+		JPanel calculadora2 = new JPanel();
+		calculadora2.setSize(this.getWidth(), getHeight());
+	//	calculadora2.setLocation(0, 0);
+		calculadora2.setLayout(new BorderLayout());
+		
+		calculadora2.setBackground(Color.black);
+		
+		JLabel input = new JLabel("20.00");
+		input.setFont(new Font("Agency FB", Font.BOLD, 40));
+		input.setBackground(Color.white);
+		input.setOpaque(true);
+		calculadora2.add(input, BorderLayout.NORTH);
+		
+		JPanel botones = new JPanel();
+		botones.setLayout(new GridLayout(4,4));
+		botones.setBackground(Color.green);
+		calculadora2.add(botones, BorderLayout.CENTER);
+		
+		String btn_text[]= {"9","8","7","6","5","4","3","2","1","0",".","+"};
+		
+		for(int i=0;i<btn_text.length;i++) {
+			botones.add(new JButton(btn_text[i]));
+		}
+		
+		JPanel action = new JPanel();
+		action.setSize(300, 100);
+		action.setLayout(new GridLayout(5,1));
+		action.setBackground(Color.GREEN);
+		action.setBorder(null);
+		calculadora2.add(action, BorderLayout.EAST);
+		
+		String action_text[]= {"CE","*","/","-","="};
+		
+		for(int i=0;i<action_text.length;i++) {
+			action.add(new JButton(action_text[i]));
+			
+			
+		
+			
+		}
+		
+				
+		
 
+		this.add(calculadora2);
+		this.repaint();
+	}
 
 
 
