@@ -39,7 +39,7 @@ public class Ventana extends JFrame {//><
 		this.setLocationRelativeTo(null);
 		
 		//para que modifique el tamaño
-		this.setSize(800,500);
+		this.setSize(800,800);
 		
 		//para poner titulo
 		this.setTitle("Hola mundo");
@@ -56,7 +56,8 @@ public class Ventana extends JFrame {//><
 		//this.admin();
 		//this.calculadora();
 		//this.loginm();
-		this.calculadora2();
+		//this.calculadora2();
+		this.interes();
 		
 	}
 	
@@ -646,7 +647,7 @@ public class Ventana extends JFrame {//><
 		}
 		
 		JPanel action = new JPanel();
-		action.setSize(300, 100);
+		
 		action.setLayout(new GridLayout(5,1));
 		action.setBackground(Color.GREEN);
 		action.setBorder(null);
@@ -669,7 +670,150 @@ public class Ventana extends JFrame {//><
 		this.repaint();
 	}
 
-
+	public void interes() {
+		JPanel login = new JPanel();
+		login.setSize(this.getWidth(), getHeight());
+		//login.setLocation(0, 0);
+		login.setLayout(null);
+		
+		login.setBackground(Color.white);
+		
+		JLabel title = new JLabel("Interes");
+		title.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 30));
+		title.setBackground(Color.red);
+		title.setLocation(20, 10);
+		title.setSize(220, 40);		
+		login.add(title);
+		
+		JPanel calcu = new JPanel();
+		
+		calcu.setSize(600, 370);
+		calcu.setLocation(20, 50);
+		calcu.setLayout(null);
+		calcu.setBackground(Color.GREEN);
+		this.add(calcu);
+		
+		JLabel title2 = new JLabel("Calcular interes");
+		title2.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 20));
+		title2.setBackground(Color.red);
+		title2.setLocation(20,1);
+		title2.setSize(220, 20);				
+		calcu.add(title2);
+		
+		JPanel calcu2 = new JPanel();
+		
+		calcu2.setSize(580, 340);
+		calcu2.setLocation(10, 20);
+		calcu2.setLayout(null);
+		calcu2.setBackground(Color.decode("#99FF99"));
+		calcu.add(calcu2);
+		
+		JLabel capital = new JLabel("Calcular capital:");
+		capital.setFont(new Font("Agency FB", Font.BOLD, 20));
+		capital.setBackground(Color.black);
+		capital.setLocation(50,30);
+		capital.setSize(220, 20);	
+		calcu2.add(capital);
+		
+		JTextField c = new JTextField();
+		c.setFont(new Font("Agency FB", Font.BOLD, 14));
+		c.setBackground(Color.white);
+		c.setLocation(180, 30);
+		c.setSize(200, 30);
+		c.setOpaque(true);
+		calcu2.add(c);
+		
+		JLabel tiempo = new JLabel("Tiempo:");
+		tiempo.setFont(new Font("Agency FB", Font.BOLD, 20));
+		tiempo.setBackground(Color.black);
+		tiempo.setLocation(50,90);
+		tiempo.setSize(220, 20);	
+		calcu2.add(tiempo);
+		
+		JTextField t = new JTextField();
+		t.setFont(new Font("Agency FB", Font.BOLD, 14));
+		t.setBackground(Color.white);
+		t.setLocation(180, 90);
+		t.setSize(200, 30);
+		t.setOpaque(true);
+		calcu2.add(t);
+		
+		JLabel tasa = new JLabel("Tasa de interes:");
+		tasa.setFont(new Font("Agency FB", Font.BOLD, 20));
+		tasa.setBackground(Color.black);
+		tasa.setLocation(50,150);
+		tasa.setSize(220, 20);	
+		calcu2.add(tasa);
+		
+		JTextField i = new JTextField();
+		i.setFont(new Font("Agency FB", Font.BOLD, 14));
+		i.setBackground(Color.white);
+		i.setLocation(180, 150);
+		i.setSize(200, 30);
+		i.setOpaque(true);
+		calcu2.add(i);
+		
+		JButton Btn1 = new JButton("Calcular");
+		Btn1.setFont(new Font("Segoe UI white", Font.ITALIC, 20));
+		Btn1.setBackground(Color.decode("#e9cc68"));
+		Btn1.setSize(150, 50);;
+		Btn1.setLocation(80, 200);;
+		calcu2.add(Btn1);
+		
+		JButton Btn2 = new JButton("Cancelar");
+		Btn2.setFont(new Font("Segoe UI white", Font.ITALIC, 20));
+		Btn2.setBackground(Color.decode("#e9cc68"));
+		Btn2.setSize(150, 50);;
+		Btn2.setLocation(240, 200);;
+		calcu2.add(Btn2);
+		
+		JPanel rosa = new JPanel();
+		
+		rosa.setSize(600, 170);
+		rosa.setLocation(20, 450);
+		rosa.setLayout(null);
+		rosa.setBackground(Color.decode("#FF9999"));
+		this.add(rosa);
+		
+		JLabel Interes = new JLabel("Interes:");
+		Interes.setFont(new Font("Agency FB", Font.TYPE1_FONT, 20));
+		Interes.setBackground(Color.black);
+		Interes.setLocation(50,30);
+		Interes.setSize(220, 20);	
+		rosa.add(Interes);
+		
+		JTextField inte = new JTextField();
+		inte.setFont(new Font("Agency FB", Font.BOLD, 14));
+		inte.setBackground(Color.white);
+		inte.setLocation(180, 30);
+		inte.setSize(200, 30);
+		inte.setOpaque(true);
+		rosa.add(inte);
+		
+		JLabel monto = new JLabel("Monto:");
+		monto.setFont(new Font("Agency FB", Font.TYPE1_FONT, 20));
+		monto.setBackground(Color.black);
+		monto.setLocation(50,90);
+		monto.setSize(220, 20);	
+		rosa.add(monto);
+		
+		JTextField mon = new JTextField();
+		mon.setFont(new Font("Agency FB", Font.BOLD, 14));
+		mon.setBackground(Color.white);
+		mon.setLocation(180, 90);
+		mon.setSize(200, 30);
+		mon.setOpaque(true);
+		rosa.add(mon);
+		
+		
+		
+		
+		this.add(login);
+		this.repaint();
+		
+		
+		
+	}
 
 
 
