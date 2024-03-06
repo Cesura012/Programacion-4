@@ -39,7 +39,7 @@ public class Ventana extends JFrame {//><
 		this.setLocationRelativeTo(null);
 		
 		//para que modifique el tamaño
-		this.setSize(800,800);
+		this.setSize(1000,800);
 		
 		//para poner titulo
 		this.setTitle("Hola mundo");
@@ -52,13 +52,13 @@ public class Ventana extends JFrame {//><
 	public void loadcomponents() {
 		
 		//this.login();
-	//	this.registro();
+		//this.registro();
 		//this.admin();
 		//this.calculadora();
 		//this.loginm();
 		//this.calculadora2();
-		this.interes();
-		
+		//this.interes();
+		this.ru();
 	}
 	
 	public void login() {
@@ -815,7 +815,267 @@ public class Ventana extends JFrame {//><
 		
 	}
 
+	public void ru() {
+		JPanel login = new JPanel();
+		login.setSize(this.getWidth(), getHeight());
+		//login.setLocation(0, 0);
+		login.setLayout(null);
+		
+		login.setBackground(Color.green);
+		
+		JLabel title = new JLabel("Registro De Usuarios");
+		title.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 30));
+		title.setBackground(Color.red);
+		title.setLocation(20, 10);
+		title.setSize(220, 40);		
+		login.add(title);
+		
+		JPanel calcu = new JPanel();
+		
+		calcu.setSize(530, 410);
+		calcu.setLocation(20, 50);
+		calcu.setLayout(null);
+		calcu.setBackground(Color.cyan);
+		this.add(calcu);
+		
+		JLabel title2 = new JLabel("Datos Generales");
+		title2.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 20));
+		title2.setBackground(Color.red);
+		title2.setLocation(20,1);
+		title2.setSize(220, 20);				
+		calcu.add(title2);
+		
+		JPanel calcu2 = new JPanel();
+		
+		calcu2.setSize(500, 380);
+		calcu2.setLocation(10, 20);
+		calcu2.setLayout(null);
+		calcu2.setBackground(Color.decode("#66FFCC"));
+		calcu.add(calcu2);
+		
+		JLabel nombres = new JLabel("Nombres:");
+		nombres.setFont(new Font("Agency FB", Font.BOLD, 20));
+		nombres.setBackground(Color.black);
+		nombres.setLocation(90,30);
+		nombres.setSize(220, 20);	
+		calcu2.add(nombres);
+		
+		JTextField c = new JTextField();
+		c.setFont(new Font("Agency FB", Font.BOLD, 14));
+		c.setBackground(Color.white);
+		c.setLocation(180, 30);
+		c.setSize(200, 30);
+		c.setOpaque(true);
+		calcu2.add(c);
+		
+		JLabel ap = new JLabel("Apellido Paterno:");
+		ap.setFont(new Font("Agency FB", Font.BOLD, 20));
+		ap.setBackground(Color.black);
+		ap.setLocation(50,90);
+		ap.setSize(220, 20);	
+		calcu2.add(ap);
+		
+		JTextField t = new JTextField();
+		t.setFont(new Font("Agency FB", Font.BOLD, 14));
+		t.setBackground(Color.white);
+		t.setLocation(180, 90);
+		t.setSize(200, 30);
+		t.setOpaque(true);
+		calcu2.add(t);
+		
+		JLabel am = new JLabel("Apellido Materno:");
+		am.setFont(new Font("Agency FB", Font.BOLD, 20));
+		am.setBackground(Color.black);
+		am.setLocation(50,150);
+		am.setSize(220, 20);	
+		calcu2.add(am);
+		
+		JTextField i = new JTextField();
+		i.setFont(new Font("Agency FB", Font.BOLD, 14));
+		i.setBackground(Color.white);
+		i.setLocation(180, 150);
+		i.setSize(200, 30);
+		i.setOpaque(true);
+		calcu2.add(i);
+		
+		JLabel f = new JLabel("Fecha De Cumpleaños:");
+		f.setFont(new Font("Agency FB", Font.BOLD, 20));
+		f.setBackground(Color.black);
+		f.setLocation(20,210);
+		f.setSize(220, 20);	
+		calcu2.add(f);
+		
+		String dia[] = { "01" ,"02" , "03" , "04" , "05" ,"06" , "07" , "08" , "09" ,"10" , "11" , "12" , "13" ,"14" , "15" , "16" , "17" ,"18" , "19" , "20" , "21" ,"22" , "23" , "24" , "25" ,"26" , "27" , "28" , "29" ,"30" , "31"};
+		
+		JComboBox cajitad = new JComboBox(dia);
+		cajitad.setLocation(180, 210);
+		cajitad.setSize(50, 20);
+		calcu2.add(cajitad);
+		
+		String mes[] = { "01" ,"02" , "03" , "04" , "05" ,"06" , "07" , "08" , "09" ,"10" , "11" , "12"};
+		
+		JComboBox cajitam = new JComboBox(mes);
+		cajitam.setLocation(235, 210);
+		cajitam.setSize(50, 20);
+		calcu2.add(cajitam);
+		
+		String año[] = { "1990" ,"1991" , "1992" , "1993" , "1994" ,"1995" , "1996" , "1997" , "1998" ,"1999" , "2000" , "2001"};
+		
+		JComboBox cajitaa = new JComboBox(año);
+		cajitaa.setLocation(290, 210);
+		cajitaa.setSize(70, 20);
+		calcu2.add(cajitaa);
+		
+		JLabel sexo = new JLabel("Sexo:");
+		sexo.setFont(new Font("Agency FB", Font.BOLD, 20));
+		sexo.setBackground(Color.black);
+		sexo.setLocation(20,270);
+		sexo.setSize(220, 20);	
+		calcu2.add(sexo);
+		
+		JRadioButton hombre = new JRadioButton("Hombre");
+		hombre.setBounds(180, 270, 70, 35);
+		hombre.setOpaque(false);
+		calcu2.add(hombre);
+		
+		JRadioButton mujer = new JRadioButton("Mujer");
+		mujer.setBounds(260, 270, 90, 35);
+		mujer.setOpaque(false);
+		calcu2.add(mujer);
+		
+		ButtonGroup grupo = new ButtonGroup();
+		grupo.add(mujer);
+		grupo.add(hombre);
+		
+		JLabel nacionalidad = new JLabel("Nacionalidad:");
+		nacionalidad.setFont(new Font("Agency FB", Font.BOLD, 20));
+		nacionalidad.setBackground(Color.black);
+		nacionalidad.setLocation(20,340);
+		nacionalidad.setSize(220, 20);	
+		calcu2.add(nacionalidad);
+		
+		String pais[] = { "argentina" ,"bolivia" , "brazil" , "colombia" , "salvador" ,"guatemala" , "mexico" , "venezuela" , "chile" ,"cuba" , "panama" , "españa"};
+		
+		JComboBox cajitap = new JComboBox(pais);
+		cajitap.setLocation(180, 340);
+		cajitap.setSize(100, 20);
+		calcu2.add(cajitap);
+		
+		
+		JPanel usu = new JPanel();
+		
+		usu.setSize(400, 410);
+		usu.setLocation(570, 50);
+		usu.setLayout(null);
+		usu.setBackground(Color.decode("#FF9999"));
+		this.add(usu);
+		
+		JLabel title4 = new JLabel("Perfil De Uuario");
+		title4.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 20));
+		title4.setBackground(Color.red);
+		title4.setLocation(20,1);
+		title4.setSize(220, 20);				
+		usu.add(title4);
+		
+		JLabel img = new JLabel("");
+		img.setIcon(new ImageIcon(getClass().getResource("descarga.png")));
+		img.setBounds(50, 50, 300, 200);
+		img.setOpaque(true);
+		img.setBackground(Color.WHITE);
+		usu.add(img);
+		
 
+		JCheckBox foto = new JCheckBox ("Montrar Foto De Perfil");
+		foto.setBounds(50, 260, 180, 35);
+		foto.setOpaque(false);
+		usu.add(foto);
+		
+		JCheckBox fecha = new JCheckBox ("Montrar Fecha De Nacimiento");
+		fecha.setBounds(50, 310, 210, 35);
+		fecha.setOpaque(false);
+		usu.add(fecha);
+		
+		
+		JPanel rosa = new JPanel();
+		
+		rosa.setSize(530, 250);
+		rosa.setLocation(20, 500);
+		rosa.setLayout(null);
+		rosa.setBackground(Color.decode("#FF6666"));
+		this.add(rosa);
+		
+		JLabel title3 = new JLabel("Datos Opcionales");
+		title3.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 20));
+		title3.setBackground(Color.red);
+		title3.setLocation(20,1);
+		title3.setSize(220, 20);				
+		rosa.add(title3);
+		
+		JLabel Descripcion = new JLabel("Descripcion:");
+		Descripcion.setFont(new Font("Agency FB", Font.TYPE1_FONT, 20));
+		Descripcion.setBackground(Color.black);
+		Descripcion.setLocation(50,30);
+		Descripcion.setSize(100, 20);	
+		rosa.add(Descripcion);
+			
+		
+		JTextArea bio = new JTextArea(10,10);
+		bio.setLocation(20, 70);
+		bio.setSize(200, 100);
+		rosa.add(bio);
+		
+		JLabel Preferencias = new JLabel("Preferencias:");
+		Preferencias.setFont(new Font("Agency FB", Font.TYPE1_FONT, 20));
+		Preferencias.setBackground(Color.black);
+		Preferencias.setLocation(290,30);
+		Preferencias.setSize(100, 20);	
+		rosa.add(Preferencias);
+			
+		
+		JTextArea pre = new JTextArea(10,10);
+		pre.setLocation(290, 70);
+		pre.setSize(200, 100);
+		rosa.add(pre);
+		
+		JPanel bo = new JPanel();
+		
+		bo.setSize(400, 250);
+		bo.setLocation(570, 500);
+		bo.setLayout(null);
+		bo.setBackground(Color.decode("#66FFCC"));
+		this.add(bo);
+		
+		
+		JButton Btn1 = new JButton("Nuevo");
+		Btn1.setFont(new Font("Segoe UI white", Font.ITALIC, 20));
+		Btn1.setBackground(Color.decode("#e9cc68"));
+		Btn1.setSize(100, 50);;
+		Btn1.setLocation(80, 30);;
+		bo.add(Btn1);
+		
+		JButton Btn2 = new JButton("Guardar");
+		Btn2.setFont(new Font("Segoe UI white", Font.ITALIC, 20));
+		Btn2.setBackground(Color.decode("#e9cc68"));
+		Btn2.setSize(150, 50);;
+		Btn2.setLocation(80, 90);;
+		bo.add(Btn2);
+		
+		JButton Btn3 = new JButton("Salir");
+		Btn3.setFont(new Font("Segoe UI white", Font.ITALIC, 20));
+		Btn3.setBackground(Color.decode("#e9cc68"));
+		Btn3.setSize(100, 50);;
+		Btn3.setLocation(80, 150);;
+		bo.add(Btn3);
+		
+		
+		
+		
+		
+		this.add(login);
+		this.repaint();
+		
+		
+	}
 
 
 }
