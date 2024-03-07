@@ -1,10 +1,16 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 
+import javax.imageio.ImageIO;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -58,7 +64,8 @@ public class Ventana extends JFrame {//><
 		//this.loginm();
 		//this.calculadora2();
 		//this.interes();
-		this.ru();
+	//	this.ru();
+		//this.paint(null);
 	}
 	
 	public void login() {
@@ -1077,5 +1084,56 @@ public class Ventana extends JFrame {//><
 		
 	}
 
+	@Override
+	public void paint(Graphics g) {
+		super.paint(g);
+		
+		Graphics2D g2d = (Graphics2D ) g;
+		
+		g2d.drawArc(100, 100, 100, 200, 45, 100);
+		g2d.setBackground(Color.red);
+		g2d.drawLine(0, 0, 500, 500);
+		g2d.drawOval(150, 200, 80, 80);
+		int x5[] = {225,150,300,225};
+		int y5[] = {50,150,150,50};
+		//g2d.drawPolyline(x5, y5, 4);
+		g2d.drawRect(300, 300, 200, 150);
+		g2d.drawRoundRect(350, 350, 200, 200, 15, 15);
+		g2d.setColor(Color.GREEN);
+		g2d.setFont(new Font("Namecat", Font.BOLD, 80));
+		g2d.drawString("hola", 400, 140);
+		g2d.fillArc(500, 100, 200, 200, 0, 90);
+		g2d.fillOval(100, 230, 80, 80);
+		
+		int x52[] = {225,180,330,225};
+		int y52[] = {80,180,100,80};
+		g2d.fillPolygon(x52, y52, 4);
+		g2d.setColor(Color.black);
+		g2d.fillRect(500, 300, 300, 100);
+		
+	//	g2d.clearRect(650, 350, 100, 50);
+		
+	/*	try {
+			
+			BufferedImage imagen = ImageIO.read(new File("src/pez.png"));
+			g2d.drawImage( imagen ,200,200,null );
+		}catch(IOException e) {
+			e.printStackTrace();
+		}*/
+		
+		
+		
+	
+	}
+	
 
+
+	
+	
+	
+	
+	
+	
+	
+	
 }
