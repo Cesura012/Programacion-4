@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -29,6 +31,7 @@ import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.border.LineBorder;
 
 public class Ventana extends JFrame {//><
 
@@ -57,8 +60,8 @@ public class Ventana extends JFrame {//><
 
 	public void loadcomponents() {
 		
-		//this.login();
-		//this.registro();
+		this.login();
+		this.registro();
 		//this.admin();
 		//this.calculadora();
 		//this.loginm();
@@ -125,6 +128,29 @@ public class Ventana extends JFrame {//><
 		acceder.setLocation(10, 230);
 		acceder.setSize(100, 30);
 		acceder.setOpaque(true);
+		
+		acceder.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("hola");
+				
+				if(c.getText().length()<=0) {
+					c.setBorder(new LineBorder(Color.red, 4));
+				}else {
+					c.setBorder(new LineBorder(Color.green, 4));
+				}
+				if(pass.getText().length()<=0) {
+					pass.setBorder(new LineBorder(Color.red, 4));
+				}else {
+					pass.setBorder(new LineBorder(Color.green, 4));
+				}
+				
+				System.out.println(c.getText());
+				System.out.println(pass.getText());
+				
+			}
+		});
 		login.add(acceder);
 		
 		JLabel img = new JLabel("");
@@ -244,6 +270,92 @@ public class Ventana extends JFrame {//><
 		
 		JButton register_btn = new JButton("Guardar");
 		register_btn.setBounds(50, 550, 100, 50);
+		
+		register_btn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("hola");
+				
+				if(name.getText().length()<=0) {
+					name.setBorder(new LineBorder(Color.red, 4));
+				}else {
+					name.setBorder(new LineBorder(Color.green, 4));
+				}
+				
+				if(type.isSelected() == false && type2.isSelected() == false && type3.isSelected() == false && type4.isSelected() == false ) {
+					type.setBorderPainted(true);
+					type.setBorder(new LineBorder(Color.RED, 4));
+					
+					type2.setBorderPainted(true);
+					type2.setBorder(new LineBorder(Color.RED, 4));
+					
+					type3.setBorderPainted(true);
+					type3.setBorder(new LineBorder(Color.RED, 4));
+					
+					type4.setBorderPainted(true);
+					type4.setBorder(new LineBorder(Color.RED, 4));
+				}else {
+					type.setBorderPainted(true);
+					type.setBorder(new LineBorder(Color.GREEN, 4));
+					
+					type2.setBorderPainted(true);
+					type2.setBorder(new LineBorder(Color.GREEN, 4));
+					
+					type3.setBorderPainted(true);
+					type3.setBorder(new LineBorder(Color.GREEN, 4));
+					
+					type4.setBorderPainted(true);
+					type4.setBorder(new LineBorder(Color.GREEN, 4));
+				}
+				
+				if(bio.getText().length()<=0) {
+					bio.setBorder(new LineBorder(Color.red, 4));
+				}else {
+					bio.setBorder(new LineBorder(Color.green, 4));
+				}
+				
+				if(gusto1.isSelected() == false && gusto2.isSelected() == false && gusto3.isSelected() == false && gusto4.isSelected() == false ) {
+					gusto1.setBorderPainted(true);
+					gusto1.setBorder(new LineBorder(Color.RED, 4));
+					
+					gusto2.setBorderPainted(true);
+					gusto2.setBorder(new LineBorder(Color.RED, 4));
+					
+					gusto3.setBorderPainted(true);
+					gusto3.setBorder(new LineBorder(Color.RED, 4));
+					
+					gusto4.setBorderPainted(true);
+					gusto4.setBorder(new LineBorder(Color.RED, 4));
+				}else {
+					gusto1.setBorderPainted(true);
+					gusto1.setBorder(new LineBorder(Color.GREEN, 4));
+					
+					gusto2.setBorderPainted(true);
+					gusto2.setBorder(new LineBorder(Color.GREEN, 4));
+					
+					gusto3.setBorderPainted(true);
+					gusto3.setBorder(new LineBorder(Color.GREEN, 4));
+					
+					gusto4.setBorderPainted(true);
+					gusto4.setBorder(new LineBorder(Color.GREEN, 4));
+				}
+			
+				
+				System.out.println(name.getText());
+				System.out.println(bio.getText());
+				
+			}
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		registro.add(register_btn);
 		
 		JMenuBar Barra = new JMenuBar();
@@ -1083,7 +1195,7 @@ public class Ventana extends JFrame {//><
 		
 		
 	}
-
+/*
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
@@ -1610,7 +1722,7 @@ public class Ventana extends JFrame {//><
 		
 		////////////////////////////////MARIO2////////////////////////////////
 		
-		
+		/*
 		//Cielo
 				g2d.setColor(Color.decode("#0665C0"));
 				g2d.fillRect(5, 10, 1000, 800);
@@ -1866,7 +1978,7 @@ public class Ventana extends JFrame {//><
 	}
 	
 	
-
+*/
 	
 	
 	
