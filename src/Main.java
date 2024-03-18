@@ -5,9 +5,12 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Ventana v = new Ventana();
+		/*Ventana v = new Ventana();
 		
-		System.out.println(v);
+		System.out.println(v);*/
+		
+		Eventoventana e = new Eventoventana();
+		System.out.println(e);
 
 	}
 
