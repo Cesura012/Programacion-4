@@ -65,7 +65,7 @@ public class Eventoventana extends JFrame {
 	
 	
 	public void agregarboton() {
-		 JButton nuevoBoton = new JButton(colorAleatorio().toString());
+		JButton nuevoBoton = new JButton(colorAleatorio().toString());
 		nuevoBoton.setBackground(colorAleatorio());
 	    int ancho = generarTamañoAleatorio();
 	    int alto = generarTamañoAleatorio();

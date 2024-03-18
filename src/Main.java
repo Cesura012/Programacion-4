@@ -1,4 +1,4 @@
-
+import javax.swing.SwingUtilities;
 
 public class Main {
 
@@ -9,9 +9,14 @@ public class Main {
 		
 		System.out.println(v);*/
 		
-		Eventoventana e = new Eventoventana();
-		System.out.println(e);
+		/*Eventoventana e = new Eventoventana();
+		System.out.println(e);*/
 
+		Ventanaboton b = new Ventanaboton();
+		System.out.println(b);
+		b.setVisible(true);
+		
+		
 	}
 
 }
