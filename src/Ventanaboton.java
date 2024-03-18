@@ -33,12 +33,7 @@ public class Ventanaboton extends JFrame {
 	            }
 	        });
 	        
-	        addMouseListener(new MouseAdapter() {
-	            @Override
-	            public void mouseClicked(MouseEvent e) {
-	                agregarBoton(e.getX(), e.getY());
-	            }
-	        });
+	        
 	    }
 	 
 	 private void agregarBoton(int x, int y) {
