@@ -12,6 +12,7 @@ import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
@@ -64,36 +65,41 @@ public class Eventoventana extends JFrame {
 	
 	
 	public void agregarboton() {
-		JButton nuevoBoton = new JButton("Nuevo Botón");
-		 nuevoBoton.setBackground(colorAleatorio());
-	        int ancho = generarTamañoAleatorio();
-	        int alto = generarTamañoAleatorio();
-	        nuevoBoton.setBounds(generarCoordenadaX(), generarCoordenadaY(), ancho, alto); // Establecer ubicación y tamaño
-	        
+		 JButton nuevoBoton = new JButton(colorAleatorio().toString());
+		nuevoBoton.setBackground(colorAleatorio());
+	    int ancho = generarTamañoAleatorio();
+	    int alto = generarTamañoAleatorio();
+	    nuevoBoton.setBounds(generarCoordenadaX(), generarCoordenadaY(), ancho, alto);
+	    nuevoBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Texto del botón: " + nuevoBoton.getText());
+            }
+        });    
         panelBotones.add(nuevoBoton);
         revalidate();
         repaint();
 	}
 	
 	 private int generarCoordenadaX() {
-	        Random random = new Random();
-	        return random.nextInt(panelBotones.getWidth() - 100);
+	    Random random = new Random();
+	    return random.nextInt(panelBotones.getWidth() - 100);
 	    }
 
-	    private int generarCoordenadaY() {
-	        Random random = new Random();
-	        return random.nextInt(panelBotones.getHeight() - 50);
+	 private int generarCoordenadaY() {
+	    Random random = new Random();
+	    return random.nextInt(panelBotones.getHeight() - 50);
 	    }
 	
 	private int generarTamañoAleatorio() {
-        Random random = new Random();
-        return random.nextInt(151) + 50;
+       Random random = new Random();
+       return random.nextInt(151) + 50;
     }
 
 	
-	 private Color colorAleatorio() {
-	        Random random = new Random();
-	        return new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256));
+	private Color colorAleatorio() {
+	   Random random = new Random();
+	   return new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256));
 	    }
 	
 	
