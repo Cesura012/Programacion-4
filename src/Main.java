@@ -12,10 +12,12 @@ public class Main {
 		/*Eventoventana e = new Eventoventana();
 		System.out.println(e);*/
 
-		Ventanaboton b = new Ventanaboton();
+	/*	Ventanaboton b = new Ventanaboton();
 		System.out.println(b);
-		b.setVisible(true);
+		b.setVisible(true);*/
 		
+		Eventoventanae a= new Eventoventanae();
+		System.out.println(a);
 		
 	}
 

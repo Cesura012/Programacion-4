@@ -57,6 +57,8 @@ public class Eventoventana extends JFrame {
             	agregarboton();
             }
         });
+        
+        
         panelBotones.add(botonPrincipal);
 	}
 	
