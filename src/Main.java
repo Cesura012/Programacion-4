@@ -6,13 +6,12 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		/*Ventana v = new Ventana();
-		
 		System.out.println(v);*/
 		
 		/*Eventoventana e = new Eventoventana();
 		System.out.println(e);*/
 
-	/*	Ventanaboton b = new Ventanaboton();
+		/*Ventanaboton b = new Ventanaboton();
 		System.out.println(b);
 		b.setVisible(true);*/
 		
