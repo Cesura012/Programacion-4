@@ -5,8 +5,8 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		/*Ventana v = new Ventana();
-		System.out.println(v);*/
+		Ventana v = new Ventana();
+		System.out.println(v);
 		
 		/*Eventoventana e = new Eventoventana();
 		System.out.println(e);*/
@@ -15,10 +15,10 @@ public class Main {
 		System.out.println(b);
 		b.setVisible(true);*/
 		
-		Eventoventanae a= new Eventoventanae();
-		System.out.println(a);
-		
-	}
+	/*	Eventoventanae a= new Eventoventanae();
+		System.out.println(a);*/
+	
+			}
 
 }
 /*JLabel img = new JLabel("");

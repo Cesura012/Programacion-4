@@ -101,7 +101,7 @@ public class Memorama extends JFrame implements ActionListener {
     }
 
     private void resetGame() {
-        // Restaura el estado inicial de los botones y las cartas
+        
         for (int i = 0; i < buttons.length; i++) {
             buttons[i].setIcon(backImages[i]);
             buttons[i].setEnabled(true);
@@ -111,11 +111,11 @@ public class Memorama extends JFrame implements ActionListener {
         flipCount = 0;
         nummovimiento = 0;
         numreinicios++;
-        // Actualizar los contadores en las etiquetas
+      
         movimientosLabel.setText("movimientos: " + nummovimiento);
         reiniciosLabel.setText("reinicios: " + numreinicios);
 
-        // Mezcla nuevamente las imágenes de las cartas
+        
         shuffleCardImages();
     }
 
@@ -146,11 +146,11 @@ public class Memorama extends JFrame implements ActionListener {
     }
 
     private void flipCard(int index) {
-        // Muestra la imagen correspondiente a la carta
+        
         buttons[index].setIcon(cardImages[index]);
         buttons[index].setEnabled(false);
-        nummovimiento++; // Incrementar el contador de movimientos
-        // Actualizar el contador de movimientos en la etiqueta
+        nummovimiento++; 
+        
         movimientosLabel.setText("movimiento: " + nummovimiento);
     }
 
@@ -170,7 +170,7 @@ public class Memorama extends JFrame implements ActionListener {
             buttons[index1].setVisible(false);
             buttons[index2].setVisible(false);
         } else {
-            // Voltea las cartas nuevamente después de un breve retraso
+           
             Timer timer = new Timer(1000, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {

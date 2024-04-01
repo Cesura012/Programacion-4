@@ -48,7 +48,7 @@ public class Ventana extends JFrame {//><
 		this.setLocationRelativeTo(null);
 		
 		//para que modifique el tamaño
-		this.setSize(1000,800);
+		this.setSize(1000,1200);
 		
 		//para poner titulo
 		this.setTitle("Hola mundo");
@@ -60,15 +60,16 @@ public class Ventana extends JFrame {//><
 
 	public void loadcomponents() {
 		
-		this.login();
-		this.registro();
+		//this.login();
+	//	this.registro();
 		//this.admin();
 		//this.calculadora();
 		//this.loginm();
 		//this.calculadora2();
 		//this.interes();
-	//	this.ru();
+		//this.ru();
 		//this.paint(null);
+		this.factura();
 	}
 	
 	public void login() {
@@ -935,6 +936,8 @@ public class Ventana extends JFrame {//><
 	}
 
 	public void ru() {
+
+		
 		JPanel login = new JPanel();
 		login.setSize(this.getWidth(), getHeight());
 		//login.setLocation(0, 0);
@@ -1195,7 +1198,390 @@ public class Ventana extends JFrame {//><
 		
 		
 	}
-/*
+
+	
+	public void factura() {
+		JPanel login = new JPanel();
+		login.setSize(this.getWidth(), getHeight());
+		//login.setLocation(0, 0);
+		login.setLayout(null);
+		
+		login.setBackground(Color.decode("#006699"));
+		
+		JLabel title = new JLabel("Factura en Java-NetBeans-ArrayList y POO");
+		title.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 30));
+		title.setBackground(Color.decode("#FFFFFF"));
+		title.setLocation(20, 10);
+		title.setSize(500, 40);		
+		login.add(title);
+		
+		JLabel title2 = new JLabel("(Sin Base de datos)");
+		title2.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 30));
+		title2.setBackground(Color.decode("#FFFFFF"));
+		title2.setLocation(20, 60);
+		title2.setSize(220, 40);		
+		login.add(title2);
+		
+		JPanel cliente = new JPanel();
+		
+		cliente.setSize(1000, 900);
+		cliente.setLocation(0, 100);
+		cliente.setLayout(null);
+		cliente.setBackground(Color.decode("#FFFFFF"));
+		this.add(cliente);
+		
+		JPanel dcliente = new JPanel();
+		
+		dcliente.setSize(940, 200);
+		dcliente.setLocation(20, 50);
+		dcliente.setLayout(null);
+		dcliente.setBackground(Color.decode("#006699"));
+		dcliente.setOpaque(true);
+		cliente.add(dcliente);
+		
+		JLabel title3 = new JLabel("Datos del cliente");
+		title3.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 30));
+		title3.setBackground(Color.decode("#FFFFFF"));
+		title3.setLocation(20, 5);
+		title3.setSize(500, 40);		
+		dcliente.add(title3);
+		
+		JLabel documento = new JLabel("Documento:");
+		documento.setFont(new Font("Agency FB", Font.BOLD, 20));
+		documento.setBackground(Color.white);
+		documento.setLocation(20,50);
+		documento.setSize(220, 20);	
+		dcliente.add(documento);
+		
+		JTextField c = new JTextField();
+		c.setFont(new Font("Agency FB", Font.BOLD, 14));
+		c.setBackground(Color.white);
+		c.setLocation(100, 50);
+		c.setSize(200, 30);
+		c.setOpaque(true);
+		dcliente.add(c);
+		
+		JLabel direccion = new JLabel("Direccion:");
+		direccion.setFont(new Font("Agency FB", Font.BOLD, 20));
+		direccion.setBackground(Color.white);
+		direccion.setLocation(20,100);
+		direccion.setSize(220, 20);	
+		dcliente.add(direccion);
+		
+		JTextField d = new JTextField();
+		d.setFont(new Font("Agency FB", Font.BOLD, 14));
+		d.setBackground(Color.white);
+		d.setLocation(100, 100);
+		d.setSize(200, 30);
+		d.setOpaque(true);
+		dcliente.add(d);
+		
+		JLabel nombre = new JLabel("Nombre:");
+		nombre.setFont(new Font("Agency FB", Font.BOLD, 20));
+		nombre.setBackground(Color.white);
+		nombre.setLocation(350,50);
+		nombre.setSize(220, 20);	
+		dcliente.add(nombre);
+		
+		JTextField n = new JTextField();
+		n.setFont(new Font("Agency FB", Font.BOLD, 14));
+		n.setBackground(Color.white);
+		n.setLocation(410, 50);
+		n.setSize(200, 30);
+		n.setOpaque(true);
+		dcliente.add(n);
+		
+		JLabel telefono = new JLabel("Telefono:");
+		telefono.setFont(new Font("Agency FB", Font.BOLD, 20));
+		telefono.setBackground(Color.white);
+		telefono.setLocation(350,110);
+		telefono.setSize(220, 20);	
+		dcliente.add(telefono);
+		
+		JTextField t = new JTextField();
+		t.setFont(new Font("Agency FB", Font.BOLD, 14));
+		t.setBackground(Color.white);
+		t.setLocation(410, 110);
+		t.setSize(200, 30);
+		t.setOpaque(true);
+		dcliente.add(t);
+		
+		JPanel dfactura = new JPanel();
+		
+		dfactura.setSize(940, 100);
+		dfactura.setLocation(20, 270);
+		dfactura.setLayout(null);
+		dfactura.setBackground(Color.decode("#006699"));
+		dfactura.setOpaque(true);
+		cliente.add(dfactura);
+		
+		JLabel title4 = new JLabel("Datos de factura");
+		title4.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 30));
+		title4.setBackground(Color.decode("#FFFFFF"));
+		title4.setLocation(20, 5);
+		title4.setSize(500, 40);		
+		dfactura.add(title4);
+		
+		JLabel factura = new JLabel("N.Factura:");
+		factura.setFont(new Font("Agency FB", Font.BOLD, 30));
+		factura.setBackground(Color.white);
+		factura.setLocation(50,50);
+		factura.setSize(220, 40);	
+		dfactura.add(factura);
+		
+		JLabel factura1 = new JLabel("1");
+		factura1.setFont(new Font("Agency FB", Font.BOLD, 20));
+		factura1.setBackground(Color.white);
+		factura1.setLocation(200,50);
+		factura1.setSize(50, 50);	
+		dfactura.add(factura1);
+		
+		JLabel fecha = new JLabel("Fecha:");
+		fecha.setFont(new Font("Agency FB", Font.BOLD, 30));
+		fecha.setBackground(Color.white);
+		fecha.setLocation(280,50);
+		fecha.setSize(220, 40);	
+		dfactura.add(fecha);
+		
+		JLabel fecha1 = new JLabel("2021/50/21");
+		fecha1.setFont(new Font("Agency FB", Font.BOLD, 20));
+		fecha1.setBackground(Color.white);
+		fecha1.setLocation(400,50);
+		fecha1.setSize(220, 50);	
+		dfactura.add(fecha1);
+		
+		JPanel lFactruras = new JPanel();
+		
+		lFactruras.setSize(940, 200);
+		lFactruras.setLocation(20, 400);
+		lFactruras.setLayout(null);
+		lFactruras.setBackground(Color.decode("#006699"));
+		lFactruras.setOpaque(true);
+		cliente.add(lFactruras);
+		
+		JLabel title5 = new JLabel("ver listado de facturas");
+		title5.setFont(new Font("Agency FB", Font.CENTER_BASELINE, 30));
+		title5.setBackground(Color.decode("#FFFFFF"));
+		title5.setLocation(20, 5);
+		title5.setSize(500, 40);		
+		lFactruras.add(title5);
+		
+		JLabel producto = new JLabel("Producto");
+		producto.setFont(new Font("Agency FB", Font.BOLD, 30));
+		producto.setBackground(Color.white);
+		producto.setLocation(50,40);
+		producto.setSize(220, 40);	
+		lFactruras.add(producto);
+		
+		JTextField p = new JTextField();
+		p.setFont(new Font("Agency FB", Font.BOLD, 14));
+		p.setBackground(Color.white);
+		p.setLocation(30, 80);
+		p.setSize(200, 30);
+		p.setOpaque(true);
+		lFactruras.add(p);
+		
+		JTextField p2 = new JTextField();
+		p2.setFont(new Font("Agency FB", Font.BOLD, 14));
+		p2.setBackground(Color.white);
+		p2.setLocation(30, 115);
+		p2.setSize(200, 30);
+		p2.setOpaque(true);
+		lFactruras.add(p2);
+		
+		JTextField p3 = new JTextField();
+		p3.setFont(new Font("Agency FB", Font.BOLD, 14));
+		p3.setBackground(Color.white);
+		p3.setLocation(30, 150);
+		p3.setSize(200, 30);
+		p3.setOpaque(true);
+		lFactruras.add(p3);
+		
+		JLabel cantidad = new JLabel("Cantidad");
+		cantidad.setFont(new Font("Agency FB", Font.BOLD, 30));
+		cantidad.setBackground(Color.white);
+		cantidad.setLocation(290,40);
+		cantidad.setSize(220, 40);	
+		lFactruras.add(cantidad);
+		
+		JTextField ca = new JTextField();
+		ca.setFont(new Font("Agency FB", Font.BOLD, 14));
+		ca.setBackground(Color.white);
+		ca.setLocation(250, 80);
+		ca.setSize(200, 30);
+		ca.setOpaque(true);
+		lFactruras.add(ca);
+		
+		JTextField ca2 = new JTextField();
+		ca2.setFont(new Font("Agency FB", Font.BOLD, 14));
+		ca2.setBackground(Color.white);
+		ca2.setLocation(250, 115);
+		ca2.setSize(200, 30);
+		ca2.setOpaque(true);
+		lFactruras.add(ca2);
+		
+		JTextField ca3 = new JTextField();
+		ca3.setFont(new Font("Agency FB", Font.BOLD, 14));
+		ca3.setBackground(Color.white);
+		ca3.setLocation(250, 150);
+		ca3.setSize(200, 30);
+		ca3.setOpaque(true);
+		lFactruras.add(ca3);
+		
+		JLabel valor = new JLabel("Valor");
+		valor.setFont(new Font("Agency FB", Font.BOLD, 30));
+		valor.setBackground(Color.white);
+		valor.setLocation(530,40);
+		valor.setSize(220, 40);	
+		lFactruras.add(valor);
+		
+		JTextField v = new JTextField();
+		v.setFont(new Font("Agency FB", Font.BOLD, 14));
+		v.setBackground(Color.white);
+		v.setLocation(460, 80);
+		v.setSize(200, 30);
+		v.setOpaque(true);
+		lFactruras.add(v);
+		
+		JTextField v2 = new JTextField();
+		v2.setFont(new Font("Agency FB", Font.BOLD, 14));
+		v2.setBackground(Color.white);
+		v2.setLocation(460, 115);
+		v2.setSize(200, 30);
+		v2.setOpaque(true);
+		lFactruras.add(v2);
+		
+		JTextField v3 = new JTextField();
+		v3.setFont(new Font("Agency FB", Font.BOLD, 14));
+		v3.setBackground(Color.white);
+		v3.setLocation(460, 150);
+		v3.setSize(200, 30);
+		v3.setOpaque(true);
+		lFactruras.add(v3);
+		
+		JLabel sub = new JLabel("Sub Total");
+		sub.setFont(new Font("Agency FB", Font.BOLD, 30));
+		sub.setBackground(Color.white);
+		sub.setLocation(750,40);
+		sub.setSize(220, 40);	
+		lFactruras.add(sub);
+		
+		JTextField sub1 = new JTextField();
+		sub1.setFont(new Font("Agency FB", Font.BOLD, 14));
+		sub1.setBackground(Color.white);
+		sub1.setLocation(720, 80);
+		sub1.setSize(200, 30);
+		sub1.setOpaque(true);
+		lFactruras.add(sub1);
+		
+		JTextField sub2 = new JTextField();
+		sub2.setFont(new Font("Agency FB", Font.BOLD, 14));
+		sub2.setBackground(Color.white);
+		sub2.setLocation(720, 115);
+		sub2.setSize(200, 30);
+		sub2.setOpaque(true);
+		lFactruras.add(sub2);
+		
+		JTextField sub3 = new JTextField();
+		sub3.setFont(new Font("Agency FB", Font.BOLD, 14));
+		sub3.setBackground(Color.white);
+		sub3.setLocation(720, 150);
+		sub3.setSize(200, 30);
+		sub3.setOpaque(true);
+		lFactruras.add(sub3);
+	
+		JLabel subtotal = new JLabel("Subtotal:");
+		subtotal.setFont(new Font("Agency FB", Font.BOLD, 20));
+		subtotal.setBackground(Color.white);
+		subtotal.setLocation(20,650);
+		subtotal.setSize(220, 20);	
+		cliente.add(subtotal);
+		
+		JLabel subtotal1 = new JLabel("6600.00");
+		subtotal1.setFont(new Font("Agency FB", Font.BOLD, 20));
+		subtotal1.setBackground(Color.white);
+		subtotal1.setLocation(100,650);
+		subtotal1.setSize(220, 20);	
+		cliente.add(subtotal1);
+		
+		JLabel descuento = new JLabel("% descuento:");
+		descuento.setFont(new Font("Agency FB", Font.BOLD, 20));
+		descuento.setBackground(Color.white);
+		descuento.setLocation(20,680);
+		descuento.setSize(220, 20);	
+		cliente.add(descuento);
+		
+		JTextField des = new JTextField();
+		des.setFont(new Font("Agency FB", Font.BOLD, 14));
+		des.setBackground(Color.black);
+		des.setLocation(80, 680);
+		des.setSize(200, 30);
+		des.setOpaque(true);
+		dcliente.add(des);
+		
+		JLabel desc = new JLabel("valor descontado:");
+		desc.setFont(new Font("Agency FB", Font.BOLD, 20));
+		desc.setBackground(Color.white);
+		desc.setLocation(150,680);
+		desc.setSize(220, 20);	
+		cliente.add(desc);
+		
+		JLabel vdesc = new JLabel("330.0");
+		vdesc.setFont(new Font("Agency FB", Font.BOLD, 20));
+		vdesc.setBackground(Color.white);
+		vdesc.setLocation(270,680);
+		vdesc.setSize(220, 20);	
+		cliente.add(vdesc);
+		
+		JLabel iva = new JLabel("IVA 19%:");
+		iva.setFont(new Font("Agency FB", Font.BOLD, 20));
+		iva.setBackground(Color.white);
+		iva.setLocation(20,720);
+		iva.setSize(220, 20);	
+		cliente.add(iva);
+		
+		JLabel niva = new JLabel("1254.0");
+		niva.setFont(new Font("Agency FB", Font.BOLD, 20));
+		niva.setBackground(Color.white);
+		niva.setLocation(100,720);
+		niva.setSize(220, 20);	
+		cliente.add(niva);
+		
+		JLabel total = new JLabel("Total Factura:");
+		total.setFont(new Font("Agency FB", Font.BOLD, 20));
+		total.setBackground(Color.white);
+		total.setLocation(20,750);
+		total.setSize(220, 20);	
+		cliente.add(total);
+		
+		JLabel vtotal = new JLabel("7524.0");
+		vtotal.setFont(new Font("Agency FB", Font.BOLD, 20));
+		vtotal.setBackground(Color.white);
+		vtotal.setLocation(100,750);
+		vtotal.setSize(220, 20);	
+		cliente.add(vtotal);
+		
+		JButton Btn1 = new JButton("Finalizar factura");
+		Btn1.setFont(new Font("Segoe UI white", Font.ITALIC, 20));
+		Btn1.setBackground(Color.decode("#E1E1E1"));
+		Btn1.setSize(250, 80);;
+		Btn1.setLocation(400, 800);;
+		cliente.add(Btn1);
+		
+		JButton Btn2 = new JButton("Limpiar");
+		Btn2.setFont(new Font("Segoe UI white", Font.ITALIC, 20));
+		Btn2.setBackground(Color.decode("#E1E1E1"));
+		Btn2.setSize(250, 80);;
+		Btn2.setLocation(700, 800);;
+		cliente.add(Btn2);
+		
+		this.add(cliente);
+		
+		this.add(login);
+		this.repaint();
+	}
+	
+/*	
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
