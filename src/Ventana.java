@@ -69,7 +69,7 @@ public class Ventana extends JFrame {//><
 		//this.interes();
 		//this.ru();
 		//this.paint(null);
-		this.factura();
+		//this.factura();
 	}
 	
 	public void login() {
