@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JPanel;
+import java.awt.Font;
 
 public class LoginMamalon {
 
@@ -72,7 +73,7 @@ public class LoginMamalon {
         JMenuItem menuItemLogin = new JMenuItem("Login");
         menuItemLogin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-            	
+            	frame.getContentPane().removeAll();;
 				frame.getContentPane().repaint();;
 				frame.getContentPane().revalidate();;
 				
@@ -87,7 +88,7 @@ public class LoginMamalon {
         JMenuItem menuItemRegistro = new JMenuItem("Registro");
         menuItemRegistro.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-            	
+            	frame.getContentPane().removeAll();;
 				frame.getContentPane().repaint();;
 				frame.getContentPane().revalidate();;
 				
@@ -102,7 +103,15 @@ public class LoginMamalon {
         JMenuItem menuItemRecuperacion = new JMenuItem("Recuperación de cuenta");
         menuItemRecuperacion.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                recuperacionCuenta();
+            	frame.getContentPane().removeAll();;
+               frame.getContentPane().repaint();;
+				frame.getContentPane().revalidate();;
+				
+				//recuperacionCuenta(frame);
+				 recuperacionCuenta();
+				
+				frame.getContentPane().repaint();;
+				frame.getContentPane().revalidate();;
             }
         });
         menuCuenta.add(menuItemRecuperacion);
@@ -287,7 +296,16 @@ public class LoginMamalon {
 	}
 	
 	public void recuperacionCuenta() {
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(128, 255, 255));
+		panel.setBounds(0, 0, 974, 532);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
 		
+		JLabel lblNewLabel_4 = new JLabel("Recuperación de cuenta");
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_4.setBounds(298, 41, 341, 69);
+		panel.add(lblNewLabel_4);
 	}
 	
 	public void usuarios() {
@@ -305,6 +323,4 @@ public class LoginMamalon {
 	public void ayudaOlvidarContraseña() {
 		
 	}
-	
-	
 }

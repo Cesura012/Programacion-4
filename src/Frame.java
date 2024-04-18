@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 import javax.swing.JFrame;
 
 public class Frame {
@@ -20,6 +22,11 @@ public class Frame {
 		
 		//para poner titulo
 		ventana.setTitle("Hola mundo");
+	}
+
+	public void paint(Graphics g) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

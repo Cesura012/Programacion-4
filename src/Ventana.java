@@ -68,7 +68,7 @@ public class Ventana extends JFrame {//><
 		//this.calculadora2();
 		//this.interes();
 		//this.ru();
-		//this.paint(null);
+		this.paint(null);
 		//this.factura();
 	}
 	
@@ -1581,15 +1581,15 @@ public class Ventana extends JFrame {//><
 		this.repaint();
 	}
 	
-/*	
+	
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
 		
 		Graphics2D g2d = (Graphics2D ) g;
-		g2d.setBackground(Color.red);
+		/*g2d.setBackground(Color.red);
 		g2d.drawArc(100, 100, 100, 200, 45, 100);
-		/*g2d.drawArc(100, 100, 100, 200, 45, 100);
+		g2d.drawArc(100, 100, 100, 200, 45, 100);
 		g2d.setBackground(Color.red);
 		g2d.drawLine(0, 0, 500, 500);
 		g2d.drawOval(150, 200, 80, 80);
@@ -2361,10 +2361,15 @@ public class Ventana extends JFrame {//><
 				g2d.drawString("2600", 750, 150);
 				
 				
+				*/
+				/////////////////////////////////////////////////pacman
+		
+		
+		
 	}
 	
 	
-*/
+
 	
 	
 	
