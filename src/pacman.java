@@ -188,7 +188,7 @@ public class pacman implements KeyListener {
 		        dibujarPastillas(g);
 		  
 		        g.setColor(Color.yellow);
-		        if (bocaAbierta) { // Usa bocaAbierta en lugar de jugador.bocaAbierta
+		        if (bocaAbierta) { 
 		            g.fillArc(jugador.getX(), jugador.getY(), jugador.getA(), jugador.getL(), 45, 270);
 		        } else {
 		            g.fillOval(jugador.getX(), jugador.getY(), jugador.getA(), jugador.getL());
